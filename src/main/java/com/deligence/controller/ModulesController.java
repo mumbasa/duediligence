@@ -29,8 +29,8 @@ public class ModulesController {
 	}
 	
 	@PostMapping("/module/section")
-	public int saveModuleSection(@RequestParam long sectionId,@RequestParam long moduleId) {
-		return moduleService.addSectinModule(moduleId, sectionId);
+	public int saveModuleSection(@RequestParam long sectionId,@RequestParam long moduleId,@RequestParam double weight) {
+		return moduleService.addSectinModule(moduleId, sectionId,weight);
 	}
 	@DeleteMapping("/module/section")
 	public int delteModuleSection(@RequestParam long sectionId,@RequestParam long moduleId) {

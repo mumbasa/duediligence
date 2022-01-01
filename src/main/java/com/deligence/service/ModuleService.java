@@ -80,9 +80,9 @@ public class ModuleService {
 		return template.update(sql,moduleId,indexId);
 	}
 	
-	public int addSectinModule(long moduleId,long sectionId) {
-		String sql ="INSERT INTO module_sections(module_id,section_id) VALUES(?,?,now()) ";
-		return template.update(sql,moduleId,sectionId);
+	public int addSectinModule(long moduleId,long sectionId,double weight) {
+		String sql ="INSERT INTO module_sections(module_id,section_id,weight) VALUES(?,?,now()) ";
+		return template.update(sql,moduleId,sectionId,weight);
 	}
 	
 	
